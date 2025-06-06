@@ -1,1 +1,101 @@
 @import "tailwindcss";
+
+/* 2) Reset base e contenitori */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Cielo di sfondo */
+.sky {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #000000, #050d1a);
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Stelle statiche / “twinkling” */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow:
+    /* stelle sparse nei quattro angoli e centro */
+    10px 20px #fff,
+    50px 80px #eee,
+    500px 300px #fff,
+    800px 600px #eee,
+    1000px 200px #ddd,
+    1700px 900px #fff,
+    1800px 1000px #eee,
+    1280px 430px #fff,
+    1507px 230px #eee,
+    1232px 732px #fff,
+    372px 54px #ddd,
+    218px 372px #eee,
+    278px 189px #eee,
+    541px 389px #eee,
+    468px 7px #fff,
+    1760px 616px #eee,
+    232px 837px #fff,
+    1026px 131px #eee,
+    1240px 356px #fff,
+    588px 139px #eee,
+    1734px 887px #ddd,
+    1690px 418px #eee,
+    657px 882px #fff,
+    1539px 17px #eee,
+    1400px 575px #ddd,
+    90px 962px #eee,
+    906px 823px #fff,
+    1033px 971px #fff,
+    735px 287px #eee,
+    300px 593px #fff,
+    1436px 790px #eee,
+    270px 668px #ddd,
+    703px 520px #fff,
+    1021px 963px #eee,
+    1210px 464px #ddd,
+    325px 372px #ddd,
+    1605px 14px #fff,
+    1790px 509px #eee,
+    458px 1019px #eee,
+    282px 283px #ddd,
+    700px 869px #fff,
+    1738px 578px #eee,
+    1717px 887px #fff,
+    1314px 801px #eee,
+    1761px 676px #eee,
+    326px 1063px #ddd,
+    901px 727px #ddd,
+    1211px 426px #fff,
+    416px 3px #fff,
+    548px 905px #ddd,
+    607px 911px #eee,
+    839px 450px #eee,
+    1257px 664px #eee;
+
+  animation: twinkle 5s infinite alternate;
+}
+
+/* Animazione per luminosità stelle */
+@keyframes twinkle {
+  0% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}
