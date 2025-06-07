@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* 2) Reset base e contenitori */
+/* Reset base e contenitori */
 html,
 body {
   margin: 0;
@@ -205,7 +205,7 @@ body {
   }
 }
 
-/* Header */
+/* HEADER */
 .link-hover {
   transition: 0.5s ease-in-out;
 }
@@ -217,4 +217,135 @@ body {
 
 #side-menu {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8));
+}
+
+/* HERO SECTION */
+#hero {
+  border: 2px solid yellow;
+  height: calc(100vh - 80px);
+}
+
+/* ANIMAZIONE SCRITTA */
+.typewriter {
+  display: inline-block;
+}
+
+.typewriter p {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 2rem;
+  color: #007bff;
+  margin: 0;
+  border-right: 2px solid #007bff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: 
+    typewriter-steps 8s steps(30, end) infinite,
+    blink-caret 1s step-end infinite;
+}
+
+@keyframes typewriter-steps {
+  0% { 
+    width: 0; 
+  }
+  37.5% { 
+    width: 100%; 
+  }
+  62.5% { 
+    width: 100%; 
+  }
+  100% { 
+    width: 0; 
+  }
+}
+
+@keyframes blink-caret {
+  from, to { 
+    border-color: transparent; 
+  }
+  50% { 
+    border-color: #007bff; 
+  }
+}
+
+/* Versione con effetto typing a steps */
+.typewriter-steps p {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 2rem;
+  color: #007bff;
+  margin: 0;
+  border-right: 2px solid #007bff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: 
+    typewriter-steps-cycle 8s infinite,
+    blink-caret 1s step-end infinite;
+}
+
+@keyframes typewriter-steps-cycle {
+  0% { 
+    width: 0; 
+  }
+  37.5% { 
+    width: 100%; 
+  }
+  62.5% { 
+    width: 100%; 
+  }
+  100% { 
+    width: 0; 
+  }
+}
+
+/* Varianti di velocità */
+.typewriter-fast p {
+  animation: 
+    typewriter-steps 4s steps(30, end) infinite,
+    blink-caret 1s step-end infinite;
+}
+
+.typewriter-slow p {
+  animation: 
+    typewriter-steps 12s steps(30, end) infinite,
+    blink-caret 1s step-end infinite;
+}
+
+/* Personalizzazioni colore cursore */
+.typewriter-blue p {
+  border-right-color: #007bff;
+  animation: 
+    typewriter-cycle 8s infinite,
+    blink-caret-blue 1s step-end infinite;
+}
+
+@keyframes blink-caret-blue {
+  from, to { 
+    border-color: transparent; 
+  }
+  50% { 
+    border-color: #007bff; 
+  }
+}
+
+.ms-button {
+  font-size: 1.1rem;
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #fff;
+  color: #000000;
+}
+
+#disponibile {
+  text-align: center;
+  display: inline-block;
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  margin-right: 5px;
+}
+
+a svg {
+  display: inline-block;
 }
