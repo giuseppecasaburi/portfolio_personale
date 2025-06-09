@@ -1,0 +1,103 @@
+@import "./typing_effect.css";
+
+/* HERO SECTION */
+#hero {
+    height: calc(100vh - 80px);
+}
+
+.ms-button {
+    font-size: 1.1rem;
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #fff;
+    color: #000000;
+}
+
+.show-more {
+    font-size: 1.1rem;
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #fff;
+    color: #000000;
+}
+
+#disponibile {
+    text-align: center;
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    border-radius: 50%;
+    background-color: #22c55e;
+    margin-right: 5px;
+}
+
+a svg {
+    display: inline-block;
+}
+
+/* ANIMAZIONE BOTTONE */
+@keyframes bounce-down-up {
+    0% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(25px);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.scroll-button {
+    animation: bounce-down-up 2s infinite ease-in-out;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+/* RESPONSIVE DESIGN */
+/* Media queries per i bottoni */
+@media (max-width: 440px) {
+    .ms-button {
+        width: 100% !important;
+        margin: 0.5rem 0 !important;
+        display: block;
+    }
+
+    .ms-button+.ms-button {
+        margin-left: 0 !important;
+    }
+}
+
+@media (min-width: 440px) and (max-width: 768px) {
+
+    /* Container dei bottoni */
+    .w-49 {
+        width: calc(50% - 0.25rem) !important;
+        display: inline-block;
+    }
+
+    .w-49 {
+        width: calc(50% - 0.25rem) !important;
+    }
+
+    /* Il bottone "disponibile" rimane a width 100% */
+    .content-center>p.ms-button {
+        width: 100% !important;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Custom width classes */
+.w-100 {
+    width: 70%;
+}
+
+.w-49 {
+    width: calc(35% - 0.25rem);
+}

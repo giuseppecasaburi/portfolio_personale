@@ -1,0 +1,52 @@
+.typing-container {
+    width: 100%
+}
+
+#typing-text {
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+    color: blue;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    min-height: 1.4em;
+    position: relative;
+}
+
+.cursor {
+    display: inline-block;
+    background-color: blue;
+    width: 3px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+    #typing-text {
+        font-size: clamp(1.5rem, 7vw, 3rem);
+    }
+
+    .typing-container {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    #typing-text {
+        font-size: clamp(1.3rem, 8vw, 2.2rem);
+        line-height: 1.3;
+    }
+}

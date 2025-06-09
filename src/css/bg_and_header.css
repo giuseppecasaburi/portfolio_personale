@@ -1,0 +1,255 @@
+/* BACKGROUND */
+/* Cielo di sfondo */
+.sky {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #000000, #050d1a);
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Stelle statiche / “twinkling” */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 4px #fff);
+  box-shadow:
+    /* Griglia Mobile (320px-768px) - Distribuzione ogni 80px circa */
+    40px 40px #fff,
+    120px 80px #eee,
+    200px 120px #ddd,
+    280px 160px #fff,
+    40px 200px #eef,
+    120px 240px #eee,
+    200px 280px #fff,
+    280px 320px #ddd,
+    40px 360px #fff,
+    120px 400px #eee,
+    200px 440px #eef,
+    280px 480px #fff,
+    40px 520px #ddd,
+    120px 560px #fff,
+    200px 600px #eee,
+    280px 640px #fff,
+    40px 680px #eef,
+    120px 720px #ddd,
+    200px 760px #fff,
+    280px 800px #eee,
+    10px 880px #eee,
+    30px 750px #eee,
+    100px 790px #eee,
+    80px 880px #eee,
+    250px 880px #eee,
+
+    /* Griglia Tablet (768px-1024px) - Distribuzione ogni 100px circa */
+    360px 60px #fff,
+    460px 120px #eee,
+    560px 80px #ddd,
+    660px 140px #fff,
+    760px 100px #eef,
+    360px 200px #eee,
+    460px 260px #fff,
+    560px 220px #ddd,
+    660px 280px #fff,
+    760px 240px #eee,
+    360px 340px #eef,
+    460px 380px #fff,
+    560px 420px #ddd,
+    660px 460px #eee,
+    760px 400px #fff,
+    360px 500px #ddd,
+    460px 540px #eef,
+    560px 580px #fff,
+    660px 620px #eee,
+    760px 560px #fff,
+    360px 660px #eee,
+    460px 700px #ddd,
+    560px 740px #fff,
+    660px 780px #eef,
+    760px 720px #fff,
+    360px 820px #eee,
+    460px 860px #fff,
+    560px 900px #ddd,
+    660px 940px #eee,
+    760px 880px #fff,
+
+    /* Griglia Desktop (1024px+) - Distribuzione ogni 120px circa */
+    840px 50px #fff,
+    960px 110px #eee,
+    1080px 70px #ddd,
+    1200px 130px #fff,
+    1320px 90px #eef,
+    1440px 150px #eee,
+    1560px 100px #fff,
+    1680px 160px #ddd,
+    1800px 120px #fff,
+    840px 190px #eee,
+    960px 230px #eef,
+    1080px 270px #fff,
+    1200px 250px #ddd,
+    1320px 290px #eee,
+    1440px 210px #fff,
+    1560px 310px #ddd,
+    1680px 270px #eef,
+    1800px 330px #fff,
+    840px 350px #eee,
+    960px 390px #fff,
+    1080px 410px #ddd,
+    1200px 370px #eee,
+    1320px 430px #fff,
+    1440px 450px #eef,
+    1560px 470px #ddd,
+    1680px 490px #fff,
+    1800px 410px #eee,
+    840px 510px #fff,
+    960px 550px #ddd,
+    1080px 570px #eee,
+    1200px 530px #fff,
+    1320px 590px #eef,
+    1440px 610px #fff,
+    1560px 650px #ddd,
+    1680px 630px #eee,
+    1800px 670px #fff,
+    840px 690px #eee,
+    960px 730px #fff,
+    1080px 750px #ddd,
+    1200px 710px #eef,
+    1320px 770px #fff,
+    1440px 790px #eee,
+    1560px 810px #ddd,
+    1680px 830px #fff,
+    1800px 750px #eee,
+    840px 850px #fff,
+    960px 890px #ddd,
+    1080px 910px #eee,
+    1200px 870px #fff,
+    1320px 930px #eef,
+    1440px 950px #fff,
+    1560px 970px #ddd,
+    1680px 990px #eee,
+    1800px 910px #fff,
+
+    /* Stelle extra per riempire spazi vuoti */
+    80px 300px #eef,
+    160px 500px #ddd,
+    240px 700px #eee,
+    320px 100px #fff,
+    400px 600px #ddd,
+    480px 200px #eef,
+    520px 800px #fff,
+    600px 350px #eee,
+    680px 150px #ddd,
+    720px 450px #fff,
+    800px 250px #eef,
+    880px 650px #eee,
+    920px 50px #fff,
+    1000px 750px #ddd,
+    1040px 150px #eef,
+    1160px 450px #fff,
+    1240px 650px #eee,
+    1280px 50px #ddd,
+    1360px 550px #fff,
+    1400px 150px #eef,
+    1480px 750px #eee,
+    1520px 350px #fff,
+    1600px 250px #ddd,
+    1640px 850px #eef,
+    1720px 450px #fff,
+    1760px 650px #eee,
+    1840px 250px #ddd,
+
+    /* Stelle per altezze maggiori */
+    100px 950px #fff,
+    300px 1050px #eee,
+    500px 1100px #ddd,
+    700px 1000px #fff,
+    900px 1150px #eef,
+    1100px 1050px #eee,
+    1300px 1100px #fff,
+    1500px 1000px #ddd,
+    1700px 1150px #eee,
+    150px 1200px #fff,
+    350px 1250px #ddd,
+    550px 1300px #eef,
+    750px 1200px #fff,
+    950px 1350px #eee,
+    1150px 1250px #ddd,
+    1350px 1300px #fff,
+    1550px 1200px #eef,
+    1750px 1350px #eee,
+
+
+    1875px 112px #fff,
+    1850px 500px #eee,
+    2000px 350px #ddd,
+    2100px 480px #fff,
+    2230px 520px #eef,
+    1950px 200px #eee,
+    1896px 800px #fff,
+    1975px 680px #ddd,
+    2025px 780px #eee,
+    2006px 902px #fff,
+    1998px 85px #ddd,
+    1963px 752px #eef,
+    1895px 196px #fff,
+    1940px 320px #eee,
+    1970px 658px #ddd,
+    1870px 429px #fff,
+    2055px 759px #eef,
+    2000px 852px #eee,
+    1963px 187px #fff,
+    2000px 745px #eee,
+    2260px 963px #ddd,
+    2100px 334px #fff,
+    2089px 451px #eef,
+    2187px 156px #eee,
+    2200px 956px #fff,
+    2175px 147px #ddd,
+    1987px 555px #eee,
+    2028px 592px #fff,
+    2269px 841px #ddd,
+    2277px 450px #eef,
+    2198px 196px #fff,
+    2158px 320px #eee,
+    2246px 658px #ddd,
+    2264px 429px #fff,
+    2150px 759px #eef,
+    2180px 852px #eee;
+
+  animation: twinkle 5s infinite alternate;
+}
+
+/* Animazione per luminosità stelle */
+@keyframes twinkle {
+  0% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}
+
+
+/* HEADER */
+.link-hover {
+  transition: 0.5s ease-in-out;
+}
+
+.link-hover:hover {
+  text-shadow: 0 0 20px #fff;
+  transform: scale(1.3);
+}
+
+#side-menu {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8));
+}
